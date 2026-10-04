@@ -1,0 +1,23 @@
+Running the password hashing demonstration (synthetic passwords only)...
+
+Scenario             Hash scheme      Method                           Found         Time
+-----------------------------------------------------------------------------------------
+dictionary_hit       unsalted_md5     Dictionary attack (unsalted)     yes       0.032 ms
+dictionary_hit       unsalted_md5     Precomputed lookup table         yes       0.002 ms
+dictionary_hit       unsalted_md5     Rainbow chain table              yes       4.436 ms
+rainbow_demo         unsalted_md5     Dictionary attack (unsalted)     yes       0.147 ms
+rainbow_demo         unsalted_md5     Precomputed lookup table         yes       0.001 ms
+rainbow_demo         unsalted_md5     Rainbow chain table              yes       4.223 ms
+bruteforce_only      unsalted_md5     Dictionary attack (unsalted)     no        0.299 ms
+bruteforce_only      unsalted_md5     Brute-force search (unsalted)    yes     377.430 ms
+outside_bounds       unsalted_md5     Dictionary attack (unsalted)     no        0.451 ms
+outside_bounds       unsalted_md5     Precomputed lookup table         no        0.001 ms
+salted_comparison    salted_pbkdf2    Precomputed lookup table         no        0.002 ms
+salted_comparison    salted_pbkdf2    Dictionary attack (salted PBKDF2) yes     641.784 ms
+
+Lookup table:   576 entries, built in 0.41 ms
+Rainbow table:  576 stored chains (chain length 60), theoretical coverage 34,560 passwords, built in 83.39 ms
+
+Total demo runtime: 1.13s
+
+Full results written to examples/sample_results.json

@@ -1,0 +1,173 @@
+{
+  "results": [
+    {
+      "method": "dictionary_unsalted",
+      "found": true,
+      "password": "Dragon2023",
+      "attempts_tried": 46,
+      "elapsed_seconds": 3.2e-05,
+      "keyspace_size": 576,
+      "notes": "",
+      "scenario": "dictionary_hit",
+      "hash_scheme": "unsalted_md5",
+      "actual_password": "Dragon2023",
+      "correct": true
+    },
+    {
+      "method": "lookup_table",
+      "found": true,
+      "password": "Dragon2023",
+      "attempts_tried": 1,
+      "elapsed_seconds": 2e-06,
+      "keyspace_size": 576,
+      "notes": "single dict lookup \u2014 the search cost was paid when the table was built",
+      "scenario": "dictionary_hit",
+      "hash_scheme": "unsalted_md5",
+      "actual_password": "Dragon2023",
+      "correct": true
+    },
+    {
+      "method": "rainbow_table",
+      "found": true,
+      "password": "Dragon2023",
+      "attempts_tried": 1831,
+      "elapsed_seconds": 0.004436,
+      "keyspace_size": 576,
+      "notes": "recovered via chain regeneration (576 stored chains x up to 60 steps each)",
+      "scenario": "dictionary_hit",
+      "hash_scheme": "unsalted_md5",
+      "actual_password": "Dragon2023",
+      "correct": true
+    },
+    {
+      "method": "dictionary_unsalted",
+      "found": true,
+      "password": "Superman99",
+      "attempts_tried": 276,
+      "elapsed_seconds": 0.000147,
+      "keyspace_size": 576,
+      "notes": "",
+      "scenario": "rainbow_demo",
+      "hash_scheme": "unsalted_md5",
+      "actual_password": "Superman99",
+      "correct": true
+    },
+    {
+      "method": "lookup_table",
+      "found": true,
+      "password": "Superman99",
+      "attempts_tried": 1,
+      "elapsed_seconds": 1e-06,
+      "keyspace_size": 576,
+      "notes": "single dict lookup \u2014 the search cost was paid when the table was built",
+      "scenario": "rainbow_demo",
+      "hash_scheme": "unsalted_md5",
+      "actual_password": "Superman99",
+      "correct": true
+    },
+    {
+      "method": "rainbow_table",
+      "found": true,
+      "password": "Superman99",
+      "attempts_tried": 1831,
+      "elapsed_seconds": 0.004223,
+      "keyspace_size": 576,
+      "notes": "recovered via chain regeneration (576 stored chains x up to 60 steps each)",
+      "scenario": "rainbow_demo",
+      "hash_scheme": "unsalted_md5",
+      "actual_password": "Superman99",
+      "correct": true
+    },
+    {
+      "method": "dictionary_unsalted",
+      "found": false,
+      "password": null,
+      "attempts_tried": 576,
+      "elapsed_seconds": 0.000299,
+      "keyspace_size": 576,
+      "notes": "password not present in the wordlist",
+      "scenario": "bruteforce_only",
+      "hash_scheme": "unsalted_md5",
+      "actual_password": "k7q2",
+      "correct": null
+    },
+    {
+      "method": "bruteforce_unsalted",
+      "found": true,
+      "password": "k7q2",
+      "attempts_tried": 557921,
+      "elapsed_seconds": 0.37743,
+      "keyspace_size": 1727604,
+      "notes": "",
+      "scenario": "bruteforce_only",
+      "hash_scheme": "unsalted_md5",
+      "actual_password": "k7q2",
+      "correct": true
+    },
+    {
+      "method": "dictionary_unsalted",
+      "found": false,
+      "password": null,
+      "attempts_tried": 576,
+      "elapsed_seconds": 0.000451,
+      "keyspace_size": 576,
+      "notes": "password not present in the wordlist",
+      "scenario": "outside_bounds",
+      "hash_scheme": "unsalted_md5",
+      "actual_password": "Xk9#mQ2vLp7$",
+      "correct": null
+    },
+    {
+      "method": "lookup_table",
+      "found": false,
+      "password": null,
+      "attempts_tried": 1,
+      "elapsed_seconds": 1e-06,
+      "keyspace_size": 576,
+      "notes": "hash not present in this table",
+      "scenario": "outside_bounds",
+      "hash_scheme": "unsalted_md5",
+      "actual_password": "Xk9#mQ2vLp7$",
+      "correct": null
+    },
+    {
+      "method": "lookup_table",
+      "found": false,
+      "password": null,
+      "attempts_tried": 1,
+      "elapsed_seconds": 2e-06,
+      "keyspace_size": 576,
+      "notes": "hash not present in this table",
+      "scenario": "salted_comparison",
+      "hash_scheme": "salted_pbkdf2",
+      "actual_password": "Dragon2023",
+      "correct": null
+    },
+    {
+      "method": "dictionary_salted",
+      "found": true,
+      "password": "Dragon2023",
+      "attempts_tried": 46,
+      "elapsed_seconds": 0.641784,
+      "keyspace_size": 576,
+      "notes": "50,000 PBKDF2 iterations per guess",
+      "scenario": "salted_comparison",
+      "hash_scheme": "salted_pbkdf2",
+      "actual_password": "Dragon2023",
+      "correct": true
+    }
+  ],
+  "lookup_table_stats": {
+    "entries": 576,
+    "build_seconds": 0.000412,
+    "hash_fn": "md5"
+  },
+  "rainbow_table_stats": {
+    "stored_chains": 576,
+    "chain_length": 60,
+    "starts_considered": 576,
+    "theoretical_coverage": 34560,
+    "build_seconds": 0.083393
+  },
+  "total_seconds": 1.128196
+}
